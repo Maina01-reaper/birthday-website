@@ -3,7 +3,7 @@ const scenes = document.querySelectorAll("section");
 const music = document.getElementById("birthday-music");
 
 function startMusic() {
-    music.onplay()
+    music.play()
 }
 const startButton = document.getElementById("start-button");
 
