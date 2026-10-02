@@ -1,5 +1,27 @@
 const scenes = document.querySelectorAll("section");
 
+const music = document.getElementById("birthday-music");
+
+function startMusic() {
+    music.onplay()
+}
+const startButton = document.getElementById("start-button");
+
+startButton.addEventListener("click", () => {
+
+    startMusic();
+
+    setTimeout(() => {
+
+        currentScene = 1;
+        showScene(currentScene);
+
+        startCountdown();
+
+    }, sceneTimes[0]);
+
+});
+
 let currentScene = 0;
 
 const photoPositions = [
@@ -64,15 +86,7 @@ const sceneTimes = [
 showScene(0);
 
 
-// Move from Scene 1 to Scene 2
-setTimeout(() => {
 
-    currentScene = 1;
-    showScene(currentScene);
-
-    startCountdown();
-
-}, sceneTimes[0]);
 
 
 // Countdown for Scene 2
